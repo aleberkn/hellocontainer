@@ -1,11 +1,11 @@
 # hellocontainer
 yum install golang
 
-mkdir ~/go/src/hello_world.go
+mkdir ~/go/src/hello_world
 
-touch hello_container.go
+touch hello.go
 
-vi hello_container.go
+vi hello.go
 
 package main
 import "fmt"
