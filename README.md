@@ -1,7 +1,10 @@
 # hellocontainer
 yum install golang
+
 mkdir ~/go/src/hello_world.go
+
 touch hello_container.go
+
 vi hello_container.go
 
 package main
