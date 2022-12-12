@@ -1,11 +1,17 @@
 # hellocontainer
+
+## install golang
+
 yum install golang
+
+
+
+## source to say hello
+
 
 touch hello.go
 
 vi hello.go
-
-## source to say hello
 
 package main
 import "fmt"
