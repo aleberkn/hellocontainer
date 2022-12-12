@@ -1,0 +1,5 @@
+podman build -t sayhello .
+
+podman images 
+
+podman run localhost/sayhello
