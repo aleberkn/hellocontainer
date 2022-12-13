@@ -34,6 +34,7 @@ WORKDIR /home/aleberkn/github/hellocontainer
 COPY hello /bin
 CMD ["hello"]
 
+
 ----------------------------------------------------------------------
 ##build and run image
 
