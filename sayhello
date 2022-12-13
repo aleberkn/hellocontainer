@@ -33,3 +33,12 @@ FROM registry.redhat.io/ubi8/ubi:8.6
 WORKDIR /home/aleberkn/github/hellocontainer
 COPY hello /bin
 CMD ["hello"]
+
+----------------------------------------------------------------------
+##build and run image
+
+podman build -t sayhello .
+
+podman images 
+
+podman run localhost/sayhello
