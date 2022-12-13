@@ -1,4 +1,4 @@
-## install golang
+## install golang, create hello.go and build
 
 yum install golang
 
@@ -20,3 +20,16 @@ func main() {
 }
 
 go build hello.go
+
+
+---------------------------------------------------------------------
+##create Dockerfile
+
+touch Dockerfile
+
+vi Dockerfile
+
+FROM registry.redhat.io/ubi8/ubi:8.6
+WORKDIR /home/aleberkn/github/hellocontainer
+COPY hello /bin
+CMD ["hello"]
