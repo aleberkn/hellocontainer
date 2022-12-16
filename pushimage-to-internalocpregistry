@@ -1,0 +1,20 @@
+oc login -u kubeadmin -p MH7DE-oLx8b-GnEey-guBqe https://api.crc.testing:6443
+
+
+##patch internal crc registry to insecure access
+
+oc patch image.config.openshift.io/cluster --type=merge  \
+--patch="{\"spec\": {\"registrySources\": {\"insecureRegistries\": \
+[\"default-route-openshift-image-registry.apps-crc.testing\" ]}}}"
+
+##tag image
+
+podman tag localhost/gohello default-route-openshift-image-registry.apps-crc.testing/test2/myhello
+
+docker login -u kubeadmin -p MH7DE-oLx8b-GnEey-guBqe "default-route-openshift-image-registry.apps-crc.testing"
+
+docker push default-route-openshift-image-registry.apps-crc.testing/test2/myhello
+
+oc project test2
+
+oc get images
